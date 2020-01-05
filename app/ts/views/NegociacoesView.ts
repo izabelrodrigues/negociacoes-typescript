@@ -1,8 +1,11 @@
-class NegociacoesView extends ViewBase<ListaNegociacao> {
-  template(model: ListaNegociacao): string {
+import { ViewBase } from './ViewBase';
+import { ListaNegociacao } from '../models/ListaNegociacao';
+
+export class NegociacoesView extends ViewBase<ListaNegociacao> {
+  template(model: ListaNegociacao, typeMsg: string): string {
       
     if (model.isEmpty()) {
-      return '<p class="alert alert-warning">Não há negociações cadastradas!</p>';
+      return `<p class="alert alert-warning">Não há negociações cadastradas!</p>`;
     }
 
     return `

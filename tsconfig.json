@@ -3,8 +3,11 @@
         "target": "es6",
         "outDir": "app/js",
         "noImplicitAny": true,
-        "removeComments": true //Faz com os comentários existam apenas no código ts. o compilado js é gerado sem os comentários
-    },
+        "removeComments": true, //Faz com os comentários existam apenas no código ts. o compilado js é gerado sem os comentários
+        "module": "System",
+        "strictNullChecks": true,
+        "experimentalDecorators": true
+        },
     "include": [
         "app/ts/**/*"
     ]

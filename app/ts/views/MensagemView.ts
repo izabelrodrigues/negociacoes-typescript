@@ -1,7 +1,13 @@
-class MensagemView extends ViewBase<string> {
-  template(model: string): string {
-    return `
-    <p class='alert alert-info'>${model}</p.       
-    `;
+import { ViewBase } from './ViewBase';
+
+export class MensagemView extends ViewBase<string> {
+  template(model: string, typeMsg: string): string {
+    if(model.length > 0){
+      return `
+      <p class='alert alert-${typeMsg}'>${model}</p.       
+      `;
+    }
+    return '';
+    
   }
 }
